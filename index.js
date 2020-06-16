@@ -33,6 +33,7 @@ function checkAns(currentLevel) {
 
 		$('h1').text("Game Over! Press Any Key to Restart");
 		$('p').text(`Your score was: ${level}`);
+		$('p').css('display', 'block');
 
 		setTimeout(function() {
 
