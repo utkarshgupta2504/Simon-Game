@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+
+    <iframe src="http://aischatbot.com/chatbox-icon.html" class="iframe" style="position: absolute;right:1%;bottom: 1%;"></iframe>
+
+  <h1 id="level-title">Press A Key to Start</h1>
+  <p>
+    The Rules are simple: The screen will blink a button. You have to repeat the pattern from the start of the game including the button pressed right now. <br>
+    Example: If Red was pressed initially, you press red. Then in the next step yellow is blinked, you have to press red, then yellow. And so on for the further rounds <br>
+    Best of Luck!
+</p>
+
+
+<div class="container">
+    <div lass="row">
+
+      <div type="button" id="green" class="btn green">
+
+      </div>
+
+      <div type="button" id="red" class="btn red">
+
+      </div>
+  </div>
+
+  <div class="row">
+
+      <div type="button" id="yellow" class="btn yellow">
+
+      </div>
+      <div type="button" id="blue" class="btn blue">
+
+      </div>
+
+  </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type='text/javascript'>
+
+    var myVar = setInterval(resizeiFrames, 1000);
+
+    function resizeiFrames(){
+
+        var iFrames = $('iframe');
+
+            for (var i = 0, j = iFrames.length; i < j; i++) {
+              iFrames[i].style.height = iFrames[i].contentWindow.document.body.offsetHeight + 'px';}
+
+}
+
+    $('.iframe').load(function() {
+
+      $('.iframe').contents().find('#chatbox-btn').click(function() {
+        alert('Clicked');
+    });
+
+  })
+
+</script>
+
+<script src="index.js"></script>
+</body>
+
+</html>
