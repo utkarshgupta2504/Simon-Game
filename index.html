@@ -10,8 +10,6 @@
 
 <body>
 
-    <iframe src="http://aischatbot.com/chatbox-icon.html" class="iframe" style="position: absolute;right:1%;bottom: 1%;"></iframe>
-
   <h1 id="level-title">Press A Key to Start</h1>
   <p>
     The Rules are simple: The screen will blink a button. You have to repeat the pattern from the start of the game including the button pressed right now. <br>
@@ -46,28 +44,6 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type='text/javascript'>
-
-    var myVar = setInterval(resizeiFrames, 1000);
-
-    function resizeiFrames(){
-
-        var iFrames = $('iframe');
-
-            for (var i = 0, j = iFrames.length; i < j; i++) {
-              iFrames[i].style.height = iFrames[i].contentWindow.document.body.offsetHeight + 'px';}
-
-}
-
-    $('.iframe').load(function() {
-
-      $('.iframe').contents().find('#chatbox-btn').click(function() {
-        alert('Clicked');
-    });
-
-  })
-
-</script>
 
 <script src="index.js"></script>
 </body>
